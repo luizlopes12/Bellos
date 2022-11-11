@@ -22,6 +22,8 @@ import org.opencv.core.MatOfByte;
 import org.opencv.highgui.Highgui;
 import org.opencv.highgui.VideoCapture;
 
+import Model.Conexao;
+
 /**
  *
  * @author luizl
@@ -39,6 +41,8 @@ public class Camera extends javax.swing.JFrame {
         Thread t = new Thread(myThread);
         t.setDaemon(true);
         myThread.runnable = true;
+        Conexao con = new Conexao();
+        con.conectar();
         t.start();
     }
     ////////////////////////////////////START CAMERA CODE////////////////////////////////////////////
