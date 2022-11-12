@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package view;
-
+import Controller.Comparator;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -23,6 +23,8 @@ import org.opencv.highgui.Highgui;
 import org.opencv.highgui.VideoCapture;
 
 import Model.Conexao;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /**
  *
@@ -44,6 +46,8 @@ public class Camera extends javax.swing.JFrame {
         Conexao con = new Conexao();
         con.conectar();
         t.start();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
     ////////////////////////////////////START CAMERA CODE////////////////////////////////////////////
     private DaemonThread myThread = null;
@@ -206,12 +210,13 @@ public class Camera extends javax.swing.JFrame {
 			//add to JLabel
 			//capture and save file
                         try{
-                            Highgui.imwrite("images/tmpImage.jpg", image);
+                            Highgui.imwrite("./images_to_compare/tmpImage.jpg", image);
+                            Comparator est = new Comparator();
+                            est.comparateImages();
                             JOptionPane.showMessageDialog(rootPane, "Vamo lá papai");
                         }catch(Exception e){
-                            JOptionPane.showMessageDialog(rootPane, "Deu ruim");
+                            JOptionPane.showMessageDialog(rootPane, e);
                         }
-
     }//GEN-LAST:event_btnCaptureActionPerformed
 
     static{

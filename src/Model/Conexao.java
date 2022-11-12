@@ -18,9 +18,9 @@ import javax.swing.JOptionPane;
 public class Conexao {
     final private String driver = "com.mysql.jdbc.Driver";
     
-    final private String url = "jdbc:mysql://127.0.0.1/bomdia";
+    final private String url = "jdbc:mysql://127.0.0.1:3307/bomdia";
     final private String usuario = "root";
-    final private String senha = "";
+    final private String senha = "admin";
     
     private Connection conexao;
     public Statement statement;

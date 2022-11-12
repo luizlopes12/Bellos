@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.*;
+
 /**
  *
  * @author luizl
@@ -16,6 +18,8 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**
