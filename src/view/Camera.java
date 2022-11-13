@@ -43,8 +43,8 @@ public class Camera extends javax.swing.JFrame {
         Thread t = new Thread(myThread);
         t.setDaemon(true);
         myThread.runnable = true;
-        Conexao con = new Conexao();
-        con.conectar();
+        //Conexao con = new Conexao();
+        //con.conectar();
         t.start();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -107,6 +107,9 @@ public class Camera extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnCapture = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -174,12 +177,31 @@ public class Camera extends javax.swing.JFrame {
                 btnCaptureActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCapture, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, -1, -1));
+        jPanel1.add(btnCapture, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("Escolha um fundo sem detalhes, preferencialmente.");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setText("Estilos de: ");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Barba", "Cabelo", "Maquiagem" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, -1, 20));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/arrow-left.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
+        jButton1.setOpaque(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -191,7 +213,9 @@ public class Camera extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -211,13 +235,22 @@ public class Camera extends javax.swing.JFrame {
 			//capture and save file
                         try{
                             Highgui.imwrite("./images_to_compare/tmpImage.jpg", image);
-                            Comparator est = new Comparator();
-                            est.comparateImages();
-                            JOptionPane.showMessageDialog(rootPane, "Vamo lá papai");
+                            //Comparator est = new Comparator();
+                            //est.comparateImages();
+                            dispose();
+                            Estilos estilos = new Estilos();
+                            estilos.setVisible(true);
                         }catch(Exception e){
                             JOptionPane.showMessageDialog(rootPane, e);
                         }
     }//GEN-LAST:event_btnCaptureActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Inicio in = new Inicio();
+        in.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     static{
        File file = new File("lib/opencv_java249.dll");
@@ -261,11 +294,14 @@ public class Camera extends javax.swing.JFrame {
     private javax.swing.JPanel cameraPanel;
     private javax.swing.JLabel display;
     private javax.swing.JPanel exampleImage;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
