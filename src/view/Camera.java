@@ -240,6 +240,7 @@ public class Camera extends javax.swing.JFrame {
                             dispose();
                             Estilos estilos = new Estilos();
                             estilos.setVisible(true);
+                            capture = null;
                         }catch(Exception e){
                             JOptionPane.showMessageDialog(rootPane, e);
                         }
