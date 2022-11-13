@@ -17,6 +17,7 @@ public class AdmLista extends javax.swing.JFrame {
     /**
      * Creates new form AdmLista
      */
+    public boolean stateOfPage;
     public AdmLista() {
         initComponents();
         jPanel2.setVisible(false);
@@ -40,9 +41,10 @@ public class AdmLista extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        btnVisu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -73,9 +75,16 @@ public class AdmLista extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Undercut simples");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Visualizar");
+        btnVisu.setBackground(new java.awt.Color(62, 118, 255));
+        btnVisu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnVisu.setForeground(new java.awt.Color(255, 255, 255));
+        btnVisu.setText("Visualizar");
+        btnVisu.setContentAreaFilled(false);
+        btnVisu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVisuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -86,13 +95,13 @@ public class AdmLista extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
+                        .addComponent(jLabel3)
+                        .addContainerGap())
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)))
-                .addContainerGap())
+                        .addComponent(btnVisu, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,7 +113,7 @@ public class AdmLista extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel5))
+                    .addComponent(btnVisu))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -157,9 +166,14 @@ public class AdmLista extends javax.swing.JFrame {
         }else{
             jPanel2.setVisible(false);
         }
-        System.out.println(selectedItem);
     }//GEN-LAST:event_cbAgendaActionPerformed
 
+    private void btnVisuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisuActionPerformed
+        // TODO add your handling code here:
+        this.stateOfPage = true;
+        this.dispose();
+        new VisuLista().setVisible(true);
+    }//GEN-LAST:event_btnVisuActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -196,12 +210,12 @@ public class AdmLista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnVisu;
     private javax.swing.JComboBox cbAgenda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
