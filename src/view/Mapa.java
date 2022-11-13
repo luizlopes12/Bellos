@@ -52,7 +52,7 @@ public class Mapa extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Estabelecimentos perto de você:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(100, 20, 200, 17);
+        jLabel2.setBounds(120, 20, 200, 17);
 
         jPanel2.setMinimumSize(new java.awt.Dimension(400, 450));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 450));

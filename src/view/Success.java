@@ -33,35 +33,89 @@ public class Success extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        btnVerAgenda = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setEnabled(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 352, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/confirm.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(140, 70, 100, 100);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 25)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(15, 102, 222));
+        jLabel2.setText("Feito!");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(150, 180, 80, 30);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setText("Seu agendamento foi realizado com sucesso.");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(70, 220, 250, 15);
+
+        btnVerAgenda.setBackground(new java.awt.Color(15, 102, 222));
+        btnVerAgenda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnVerAgenda.setForeground(new java.awt.Color(255, 255, 255));
+        btnVerAgenda.setText("Ver meus agendamentos");
+        btnVerAgenda.setContentAreaFilled(false);
+        btnVerAgenda.setOpaque(true);
+        btnVerAgenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerAgendaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnVerAgenda);
+        btnVerAgenda.setBounds(110, 310, 170, 30);
+
+        btnVoltar.setBackground(new java.awt.Color(242, 248, 255));
+        btnVoltar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnVoltar.setForeground(new java.awt.Color(15, 102, 222));
+        btnVoltar.setText("Voltar ao inicio");
+        btnVoltar.setContentAreaFilled(false);
+        btnVoltar.setOpaque(true);
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnVoltar);
+        btnVoltar.setBounds(130, 360, 120, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVerAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerAgendaActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new Agendamentos().setVisible(true);
+    }//GEN-LAST:event_btnVerAgendaActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new Inicio().setVisible(true);
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,6 +153,11 @@ public class Success extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnVerAgenda;
+    private javax.swing.JButton btnVoltar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
