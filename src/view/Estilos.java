@@ -64,7 +64,7 @@ public class Estilos extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 51, 255));
         jPanel3.setLayout(null);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\luizl\\OneDrive\\Área de Trabalho\\bases-P.I\\Projeto\\Bellos\\images_to_compare\\1.jpg")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/photos/1.jpg"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -80,7 +80,7 @@ public class Estilos extends javax.swing.JFrame {
         jPanel2.setMinimumSize(new java.awt.Dimension(180, 160));
         jPanel2.setLayout(null);
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\luizl\\OneDrive\\Área de Trabalho\\bases-P.I\\Projeto\\Bellos\\images_to_compare\\2.jpg")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/photos/2.jpg"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -96,7 +96,7 @@ public class Estilos extends javax.swing.JFrame {
         jPanel4.setMinimumSize(new java.awt.Dimension(180, 160));
         jPanel4.setLayout(null);
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\luizl\\OneDrive\\Área de Trabalho\\bases-P.I\\Projeto\\Bellos\\images_to_compare\\3.jpg")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/photos/3.jpg"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -112,7 +112,7 @@ public class Estilos extends javax.swing.JFrame {
         jPanel5.setMinimumSize(new java.awt.Dimension(180, 150));
         jPanel5.setLayout(null);
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\luizl\\OneDrive\\Área de Trabalho\\bases-P.I\\Projeto\\Bellos\\images_to_compare\\4.jpg")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/photos/4.jpg"))); // NOI18N
         jPanel5.add(jButton4);
         jButton4.setBounds(0, 0, 170, 170);
 

@@ -92,7 +92,7 @@
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\luizl\OneDrive\&#xc1;rea de Trabalho\bases-P.I\Projeto\Bellos\images_to_compare\1.jpg"/>
+                  <Image iconType="3" name="/photos/1.jpg"/>
                 </Property>
               </Properties>
               <Events>
@@ -128,7 +128,7 @@
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\luizl\OneDrive\&#xc1;rea de Trabalho\bases-P.I\Projeto\Bellos\images_to_compare\2.jpg"/>
+                  <Image iconType="3" name="/photos/2.jpg"/>
                 </Property>
               </Properties>
               <Events>
@@ -164,7 +164,7 @@
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\luizl\OneDrive\&#xc1;rea de Trabalho\bases-P.I\Projeto\Bellos\images_to_compare\3.jpg"/>
+                  <Image iconType="3" name="/photos/3.jpg"/>
                 </Property>
               </Properties>
               <Events>
@@ -200,7 +200,7 @@
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\luizl\OneDrive\&#xc1;rea de Trabalho\bases-P.I\Projeto\Bellos\images_to_compare\4.jpg"/>
+                  <Image iconType="3" name="/photos/4.jpg"/>
                 </Property>
               </Properties>
               <Constraints>
