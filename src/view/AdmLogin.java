@@ -154,7 +154,7 @@ public class AdmLogin extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
-        if(txtEmail.getText().equals("luizlopes12@outlook.com") && txtPass.getText().equals("luizlopes12")){
+        if(txtEmail.getText().equals("adm") && txtPass.getText().equals("adm")){
             AdmLista lista = new AdmLista();
             lista.setVisible(true);
             dispose();
