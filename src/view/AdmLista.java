@@ -53,7 +53,7 @@ public class AdmLista extends javax.swing.JFrame {
 
         cbAgenda.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cbAgenda.setForeground(new java.awt.Color(125, 125, 125));
-        cbAgenda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16/11/2022", "17/11/2022", "18/11/2022" }));
+        cbAgenda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16/11/2022", "17/11/2022", "18/11/2022", "19/11/2022" }));
         cbAgenda.setBorder(null);
         cbAgenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +161,7 @@ public class AdmLista extends javax.swing.JFrame {
     private void cbAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAgendaActionPerformed
         // TODO add your handling code here
         Object selectedItem = cbAgenda.getSelectedItem();
-        if(selectedItem.equals("17/11/2022")){
+        if(selectedItem.equals("19/11/2022")){
         jPanel2.setVisible(true);
         }else{
             jPanel2.setVisible(false);

@@ -57,7 +57,7 @@ public class Agenda extends javax.swing.JFrame {
         jLabel2.setBounds(110, 50, 130, 20);
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16/11/2022", "17/11/2022", "18/11/2022" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16/11/2022", "17/11/2022", "18/11/2022", "19/11/2022" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
